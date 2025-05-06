@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="PT-br"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Calcular Metabolismo</h1>
+    <p>Preencha os dados abaixo para calcular o seu metabolismo basal.</p>
+    <br>
+    <form action="calcular" method="POST">
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" required>
+        <br>
+
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" name="peso" step="0.1" required>
+        <br>
+
+        <label for="altura">Altura (cm):</label>
+        <input type="number" id="altura" name="altura" required>
+        <br>
+
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="homem">Homem</option>
+            <option value="mulher">Mulher</option>
+        </select>
+
+        <br>
+        
+   
+
+    <form action="calcular_nivel" method="POST">
+        <label for="nivel-atividade">Nível de atividade física:</label>
+        <select id="nivel-atividade" name="nivel-atividade" required>
+            <option value="sedentario">Sedentário</option>
+            <option value="leve">Leve</option>
+            <option value="moderado">Moderado</option>
+            <option value="intenso">Intenso</option></select>
+        <br>
+        <label for="horas-treino">Quantas horas você treina por dia:</label>
+        <input type="number" id="horas-treino" name="horas-treino" step="0.1" required>
+        <br>
+    
+        <label for="dias-treino">Quantos dias você treina por semana:</label>
+        <input type="number" id="dias-treino" name="dias-treino" required>
+        <br>
+    </form>
+    <br>
+    <button type="button" id="calcular">Calcular</button>
+    <br>
+    <h2>Seu metabolismo basal é: </h2>
+    <p id="resultado"></p>
+    <br>
+    <h2>Gasto diário: </h2>
+    <p id="resultado-nivel"></p>
+</html>
+</body>
